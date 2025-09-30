@@ -1,6 +1,4 @@
-/* =============================
-   ESTILO GERAL DO CHAT
-============================= */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f2f6f9;
@@ -15,9 +13,7 @@ body {
     background-color: #e5eef5;
 }
 
-/* =============================
-   CABEÇALHO
-============================= */
+
 .chat-header {
     background-color: #007bff;
     color: white;
@@ -28,9 +24,7 @@ body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* =============================
-   ÁREA DE MENSAGENS
-============================= */
+
 .chat-box {
     flex: 1;
     padding: 15px;
@@ -39,7 +33,7 @@ body {
     flex-direction: column;
 }
 
-/* Mensagens */
+
 .message {
     max-width: 80%;
     padding: 10px 14px;
@@ -65,9 +59,7 @@ body {
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-/* =============================
-   ÁREA DE ENTRADA DE TEXTO
-============================= */
+
 .chat-input {
     display: flex;
     padding: 10px;
@@ -99,9 +91,7 @@ body {
     background-color: #218838;
 }
 
-/* =============================
-   ANIMAÇÃO "IA DIGITANDO..."
-============================= */
+
 .dot {
     height: 8px;
     width: 8px;
@@ -129,17 +119,13 @@ body {
     }
 }
 
-/* =============================
-   ANIMAÇÕES
-============================= */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* =============================
-   SCROLLBAR BONITO
-============================= */
+
 .chat-box::-webkit-scrollbar {
     width: 8px;
 }
@@ -148,3 +134,4 @@ body {
     background: rgba(0,0,0,0.2);
     border-radius: 4px;
 }
+
