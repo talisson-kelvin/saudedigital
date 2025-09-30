@@ -51,3 +51,45 @@ sendBtn.addEventListener("click", sendMessage);
 userInput.addEventListener("keypress", e => {
   if (e.key === "Enter") sendMessage();
 });
+function sendMessage() {
+  const message = userInput.value.trim();
+  if (!message) return;
+
+  addMessage(message, "user");
+  userInput.value = "";
+
+  addTypingIndicator();
+
+  setTimeout(() => {
+    removeTypingIndicator();
+    let resposta;
+
+    if (aguardandoAgendamento) {
+      if (message.toLowerCase().includes("sim")) {
+        resposta = solicitarNome();
+      } else {
+        aguardandoAgendamento = false;
+        resposta = "Ok, não farei o agendamento. ❓ Deseja que eu sugira tratamentos iniciais?";
+      }
+    } 
+    else if (aguardandoNome) {
+      resposta = solicitarIdade(message);
+    } 
+    else if (aguardandoIdade) {
+      resposta = agendarHospital(message);
+    } 
+    else if (aguardandoTratamento) {
+      if (message.toLowerCase().includes("sim")) {
+        resposta = sugerirTratamento();
+      } else {
+        aguardandoTratamento = false;
+        resposta = "👍 Entendido. Desejo melhoras!";
+      }
+    } 
+    else {
+      resposta = diagnosticarSintomas(message);
+    }
+
+    addMessage(resposta, "bot");
+  }, 1000);
+}
