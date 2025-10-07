@@ -92,4 +92,4 @@ function sendMessage() {
 
     addMessage(resposta, "bot");
   }, 1000);
-}
+}sform = `rotateX(${y}deg) rotateY(${x}deg)`;

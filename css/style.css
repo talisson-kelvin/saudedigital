@@ -5,7 +5,7 @@ body {
   color: #333;
 }
 
-
+/* HERO */
 header.hero {
   background: linear-gradient(135deg, #007BFF, #28a745);
   color: white;
@@ -51,7 +51,7 @@ header.hero {
   100% { transform: translateY(0px); }
 }
 
-
+/* SEÇÃO O PROBLEMA */
 .problema {
   display: flex;
   align-items: center;
@@ -86,7 +86,7 @@ header.hero {
   animation: float 3s ease-in-out infinite;
 }
 
-
+/* CARDS DE BENEFÍCIOS */
 .beneficios {
   text-align: center;
   padding: 4rem 2rem;
@@ -119,7 +119,7 @@ header.hero {
   margin-bottom: 1rem;
 }
 
-
+/* CTA */
 .cta {
   text-align: center;
   padding: 3rem 2rem;
@@ -142,11 +142,10 @@ header.hero {
   background: #f1f1f1;
 }
 
-
+/* FOOTER */
 footer {
   background: #007BFF;
   color: white;
   text-align: center;
   padding: 1rem;
 }
-
